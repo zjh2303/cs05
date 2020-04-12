@@ -1,0 +1,93 @@
+﻿C＃企业级开发技术练习5答题卡
+
+班级：计算机信息管理2班     
+姓名：张佳楠
+学号：20190307230
+
+*注：排除答案放置在序号下方。* /
+
+（一）
+
+
+命名空间ConsoleApp1
+{
+    公共类UserSys
+    {
+        公共委托void DLogin（object o，int n）;
+        DLogin _elogin;
+        公共活动DLogin ELogin
+        {
+            加
+            {_elogin + =值；}
+            去掉
+            {_elogin + =值；}
+        }
+        int n = 0;
+        公共无效的login（）
+        {
+            _elogin（this，++ n）;
+        }
+    }
+    班级计划
+    {
+        静态void Main（string [] args）
+        {
+            UserSys用户=新的UserSys（）;
+            user.ELogin + =（o，n）=> Console.WriteLine（$“ 1000 {n}登录{o}成功”）;
+            用户登录（）;
+            用户登录（）;
+            用户登录（）;
+        }
+    }
+}
+
+（二）
+
+命名空间ConsoleApp2
+{
+    班级计划
+    {
+        静态void Main（string [] args）
+        {
+            字符串str1 =“ C＃，java，python，golang，javascript，PHP，VB”;
+            字符串[] str2 = str1.Split（'，'）;
+            Array.Sort（str2，（a，b）=>字符串。比较（b.ToString（），a.ToString（）））;
+            foreach（str1中的var i）
+                str1 + = i.ToString（）;
+            字符串str3 = string.Join（“，”，str2）;
+            Console.WriteLine（str3）;
+        }
+    }
+}
+
+（三）
+使用系统；
+使用System.Numerics;
+
+命名空间ConsoleApp3
+{
+    公共课程MathSys
+    {
+        公共委托void DFilter（int [] num）;
+        公共事件DFilter EFilter；
+        公共无效过滤器（int [] num）
+        {
+            EFilter（num）;
+        }
+    }
+    班级计划
+    {
+        静态void Main（string [] args）
+        {
+            MathSys math =新的MathSys（）;
+            math.EFilter + = num =>
+            {
+                int []偶数= Array.FindAll（new [] {e％2 == 0}）;
+                Console.WriteLine（“分布式中的偶数如下：”）;
+                前言
+                    Console.WriteLine（i）;
+            };
+            math.filter（new [] {10，8，7，21，24}）;
+        }
+    }
+}
